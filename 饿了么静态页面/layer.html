@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- 图标字体 -->
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <!-- 移动端匹配 -->
+    <script>
+        (function(){
+            // 获取HTML根对象
+            var html=document.documentElement;
+            var whtml=html.getBoundingClientRect().width;
+            html.style.fontSize=whtml/7.5+"px";
+        })();
+    </script>
+
+<style type="text/css">  
+    /* 本页样式写在这里 */
+    .layer .mask{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(7, 17, 27,0.8);
+        filter: blur(0.1rem);
+        z-index: -1;
+    }
+    .layer{
+        margin: 0 0.72rem;
+    }
+    .layer .main-title{
+        margin-top: 1.28rem;
+        font-size: 0.32rem;
+        color: rgb(255, 255, 255);
+        line-height: 0.32rem;
+        font-weight: 700;
+    }
+    /* 星星 */
+    .stars {
+            font-size: 0.28rem;
+        }
+
+        .stars .or {
+            color: #ff9900;
+        }
+
+        .stars .gray {
+            color: #d4d6d9;
+        }
+
+        /* 星星 */
+        .star-wrap{
+            margin: 0.32rem 0 0;
+        }
+        .discount .title{
+            font-size: 0.32rem;
+            color: rgb(255, 255, 255);
+            line-height: 0.32rem;
+            font-weight: 700;
+            margin:0.56rem 0.24rem 0.48rem;
+            padding-top: 0.48rem;
+        }
+        .discount .title::before{
+            content: "";
+            display: inline-block;
+            width: 2.24rem;
+            height: 0.02rem;
+            background-color: rgba(255,255,255,0.5);
+            position: absolute;
+            right: 0.72rem;
+            margin-top: 0.18rem;
+        }
+        .discount .title::after{
+            content: "";
+            display: inline-block;
+            width: 2.24rem;
+            height: 0.02rem;
+            background-color: rgba(255,255,255,0.5);
+            position: absolute;
+            left: 0.72rem;
+            margin-top: 0.18rem;
+        }
+        .dis-ul .text{
+            font-size: 0.24rem;
+            font-weight: 200;
+            color: #fff;
+            line-height: 0.24rem;
+            vertical-align: middle;
+        }
+        .dis-ul .img{
+            width: 0.32rem;
+            height: 0.32rem;
+            background: url(img/discount_1@2x.png) no-repeat;
+            background-size: 0.32rem 0.32rem;
+            margin-right: 0.12rem;
+        }
+        .dis-ul li{
+            margin-bottom: 0.24rem;
+            padding: 0 0.24rem;
+        }
+        .info{
+            font-size: 0.24rem;
+            color: #fff;
+            font-weight: 200;
+            line-height: 0.48rem;
+        }
+        .close{
+            position: absolute;
+            bottom: 0.64rem;
+            left: 0;
+            right: 0;
+            font-size: 0.64rem;
+            color: rgba(255, 255, 255,0.5);
+        }
+</style>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="layer">
+        <div class="mask"></div>
+        <p class="main-title tc">粥品香坊（大运新村）</p>
+        <div class="tc star-wrap">
+            <span class="stars">
+                <span class="iconfont icon-xingxing1 or"></span>
+                <span class="iconfont icon-xingxing1 or"></span>
+                <span class="iconfont icon-xingxing1 or"></span>
+                <span class="iconfont icon-xingxing1 or"></span>
+                <span class="iconfont icon-xingxing1 gray"></span>
+            </span>
+        </div>
+        <!-- 优惠信息 -->
+        <div class="discount">
+            <div class="title tc">优惠信息</div>
+            <ul class="dis-ul">
+                <li class="clearfix">
+                    <div class="img fl"></div>
+                    <div class="text fl">在线支付</div>
+                </li>
+                <li class="clearfix">
+                    <div class="img fl"></div>
+                    <div class="text fl">在线支付</div>
+                </li>
+                <li class="clearfix">
+                    <div class="img fl"></div>
+                    <div class="text fl">在线支付</div>
+                </li>
+            </ul>
+        </div>
+        <!-- 商家公告 -->
+        <div class="discount">
+            <div class="title tc">商家公告</div>
+            <p class="info">xixixixixixix</p>
+        </div>
+        <!-- 取消 -->
+        <div class="close tc">
+            <span class="iconfont icon-quxiao tc"></span>
+        </div>
+    </div>
+</body>
+</html>

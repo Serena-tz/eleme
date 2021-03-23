@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- 图标字体 -->
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <!-- 移动端匹配 -->
+    <script>
+        (function () {
+            // 获取HTML根对象
+            var html = document.documentElement;
+            var whtml = html.getBoundingClientRect().width;
+            html.style.fontSize = whtml / 7.5 + "px";
+        })();
+    </script>
+
+    <style type="text/css">
+        /* 本页样式写在这里 */
+        .header {
+            background-color: rgb(0, 0, 0, 0.2);
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: scale(1.2);
+            filter: blur(0.1rem);
+            -webkit-filter: blur(0.1rem);
+        }
+
+        .main .pic {
+            width: 1.28rem;
+            height: 1.28rem;
+            border-radius: 0.04rem;
+            overflow: hidden;
+            margin: 0.48rem 0.32rem 0.36rem 0.48rem;
+        }
+
+        .main .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main .text {
+            margin-top: 0.48rem;
+        }
+
+        .title .brand {
+            margin: 0.04rem 0.12rem 0.16rem 0;
+            width: 0.6rem;
+            height: 0.36rem;
+            background: url(img/brand@2x.png) no-repeat;
+            background-size: 0.6rem 0.36rem;
+        }
+
+        .title .name {
+            font-size: 0.32rem;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin: 0 0 0.16rem 0.12rem;
+            line-height: 0.36rem;
+        }
+
+        .text .get {
+            font-size: 0.24rem;
+            color: rgb(255, 255, 255);
+            font-weight: 200;
+            line-height: 0.24rem;
+        }
+
+        .discount {
+            margin: 0.2rem 0 0.04rem;
+        }
+
+        .discount .con {
+            font-size: 0.2rem;
+            color: rgb(255, 255, 255);
+            font-weight: 200;
+            line-height: 0.24rem;
+        }
+
+        .min {
+            width: 0.24rem;
+            height: 0.24rem;
+            background: url(img/decrease_1@2x.png) no-repeat;
+            background-size: 0.24rem 0.24rem;
+            margin-right: 0.08rem;
+        }
+
+        .tips {
+            height: 0.56rem;
+            line-height: 0.56rem;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .bulletin {
+            width: 0.44rem;
+            height: 0.24rem;
+            display: inline-block;
+            background: url(img/bulletin@2x.png) no-repeat;
+            background-size: 0.44rem 0.24rem;
+            margin: 0.17rem 0.08rem 0 0.24rem;
+        }
+
+        .tips .text {
+            font-size: 0.2rem;
+            color: rgb(255, 255, 255);
+            font-weight: 200;
+            line-height: 0.56rem;
+            width: 6rem;
+        }
+
+        .tips .more {
+            margin: 0 0.24rem 0 0.08rem;
+            color: white;
+        }
+
+        .num {
+            position: absolute;
+            bottom: 0.36rem;
+            right: 0.24rem;
+            font-size: 0.2rem;
+            color: white;
+            font-weight: 200;
+            line-height: 0.24rem;
+            height: 0.48rem;
+            line-height: 0.48rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            border-radius: 0.5rem;
+        }
+
+        .number {
+            margin-left: 0.16rem;
+        }
+        .right {
+            margin: 0 0.16rem 0 0.04rem;
+            font-size: 0.2rem;
+        }
+        .tab{
+            height: 0.8rem;
+            line-height: 0.8rem;
+            border-bottom: 1px solid rgba(7,17,27,0.1);
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+        }
+        .tab a{
+            font-size: 0.28rem;
+            color: rgba(77,85,93);
+        }
+        .tab a.on{
+            color: rgba(240,20,20);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部-->
+    <div class="header">
+        <!-- 主体 -->
+        <div class="main clearfix pore">
+            <!-- 图片 -->
+            <img class="header-bg" src="http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg" alt="">
+            <div class="pic fl">
+                <img src="http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg" alt="">
+            </div>
+            <!-- 标题 -->
+            <div class="text fl">
+                <div class="title clearfix">
+                    <div class="brand fl"></div>
+                    <div class="fl name">粥品香坊（回龙观）</div>
+                </div>
+                <p class="get">蜂鸟专送/20分钟送达</p>
+                <div class="discount clearfix">
+                    <div class="min fl"></div>
+                    <div class="fl con">在线支付满28减5</div>
+                </div>
+            </div>
+            <!-- 个数 -->
+            <div class="num ">
+                <span class="number">5</span>
+                <span>个</span>
+                <span class="iconfont icon-arrow-right right"></span>
+            </div>
+        </div>
+        <!-- 公告 -->
+        <div class="tips">
+            <div class="bulletin fl"></div>
+            <div class="text cutFont fl">
+                粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。
+            </div>
+            <div class="more fr iconfont icon-arrow-right white" style="font-size: 0.14rem;"></div>
+        </div>
+        <!-- 页面切换 -->
+        <div class="tab">
+            <a class="on" href="#">商品</a>
+            <a href="#">评价</a>
+            <a href="#">商家</a>
+        </div>
+    </div>
+</body>
+
+</html>

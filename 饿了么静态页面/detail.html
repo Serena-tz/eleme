@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- 图标字体 -->
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <!-- 移动端匹配 -->
+    <script>
+        (function () {
+            // 获取HTML根对象
+            var html = document.documentElement;
+            var whtml = html.getBoundingClientRect().width;
+            html.style.fontSize = whtml / 7.5 + "px";
+        })();
+    </script>
+
+    <style type="text/css">
+        /* 本页样式写在这里 */
+        .detail {
+            background-color: #f3f5f7;
+        }
+
+        .bigpic {
+            width: 100%;
+            height: 7.5rem;
+        }
+
+        .bigpic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .intro {
+            background-color: #fff;
+            padding: 0.36rem;
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .intro .title {
+            font-size: 0.28rem;
+            font-weight: 700;
+            color: rgb(7, 17, 27);
+            margin-bottom: 0.16rem;
+        }
+
+        .intro .much {
+            font-size: 0.2rem;
+            color: rgb(147, 153, 159);
+        }
+
+        .much .left {
+            margin-right: 0.24rem;
+        }
+
+        .price {
+            margin-top: 0.36rem;
+        }
+
+        .intro .redp {
+            font-size: 0.2rem/0.28rem;
+            font-weight: 700;
+            color: rgb(240, 20, 20);
+            line-height: 0.48rem;
+            margin-right: 0.24rem;
+        }
+
+        .intro .grayp {
+            font-size: 0.2rem;
+            font-weight: 700;
+            color: rgb(147, 153, 159);
+            line-height: 0.48rem;
+            text-decoration: line-through;
+        }
+
+        .intro .add {
+            width: 1.48rem;
+            height: 0.48rem;
+            line-height: 0.48rem;
+            background-color: #00a0dc;
+            color: #fff;
+            position: absolute;
+            right: 0.36rem;
+            bottom: 0.36rem;
+            border-radius: 0.24rem;
+            font-size: 0.2rem;
+        }
+
+        .info {
+            padding: 0.36rem;
+            background-color: #fff;
+            margin-top: 0.3rem;
+            border-top: 0.01rem solid rgb(7, 17, 27, 0.2);
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .rate {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info .title {
+            margin-bottom: 0.12rem;
+            font-size: 0.24rem;
+            color: rgb(7, 17, 27);
+            line-height: 0.36rem;
+        }
+
+        .info .text {
+            font-size: 0.24rem;
+            font-weight: 200;
+            color: rgb(77, 85, 93);
+            line-height: 0.4rem;
+        }
+
+        .tab-title {
+            font-size: 0.24rem/0.16rem;
+            padding-bottom: 0.36rem;
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .tab-title>a {
+            display: inline-block;
+            padding: 0.16rem 0.24rem;
+            margin-right: 0.16rem;
+        }
+
+        .tab-title .all {
+            background-color: #00a0dc;
+        }
+
+        .tab-title .ok {
+            background-color: #ccecf8;
+            color: rgb(7, 17, 27);
+        }
+
+        .tab-title .nook {
+            background-color: #e9ebec;
+            color: rgb(7, 17, 27);
+        }
+
+        .tab-title .num {
+            font-size: 0.2rem;
+            margin-left: 0.1rem;
+        }
+
+        .only {
+            background-color: #fff;
+            height: 0.95rem;
+            line-height: 0.95rem;
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .check-icon {
+            color: #b7bbbf;
+        }
+
+        .check {
+            width: 0;
+            margin-right: -0.1rem;
+        }
+
+        .label {
+            margin-left: 0.36rem;
+        }
+
+        .rate-list {
+            padding: 0 0.36rem;
+            background-color: #fff;
+            padding-bottom: 0.95rem;
+        }
+
+        .rate-list li {
+            padding: 0.32rem 0;
+        }
+        .rate-list li:not(:last-child){
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+        .rate-list .icon{
+            margin-right: 0.12rem;
+            font-size: 0.24rem;
+        }
+        .rate-list .like{
+            color: #00a0dc;
+        }
+        .rate-list .nolike{
+            color: #b7bbbf;
+        }
+        .page{
+            font-size: 0.24rem;
+            color: rgb(7, 17, 27);
+            line-height: 0.32rem;
+        }
+        
+        .rate-list img{
+            width: 0.2rem;
+            height: 0.2rem;
+            border-radius: 50%;
+            margin-left: 0.12rem;
+        }
+        .rate-list .time,.rate-list .name{
+            margin-bottom: 0.12rem;
+            font-size: 0.2rem;
+            color: rgb(147, 153, 159);
+            line-height: 0.24rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部-->
+    <div class="detail">
+        <div class="bigpic">
+            <img src="http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750"
+                alt="">
+        </div>
+        <div class="intro pore">
+            <p class="title">皮蛋瘦肉粥</p>
+            <p class="much">
+                <span class="left">月瘦1132ren</span>
+                <span>11111</span>
+            </p>
+            <p class="price">
+                <span class="redp">￥24</span>
+                <span class="grayp">￥38</span>
+            </p>
+            <!-- 加入购物车 -->
+            <div class="add tc">加入购物车</div>
+        </div>
+        <!-- 商品介绍 -->
+        <div class="info">
+            <div class="title">商品介绍</div>
+            <p class="text">一万皮蛋粥</p>
+        </div>
+        <!-- 商品评价 -->
+        <div class="info rate">
+            <div class="title">商品评价</div>
+            <div class="tab-title">
+                <a class="all white" href="#">全部<span class="num">57</span></a>
+                <a class="ok" href="#">推荐<span class="num">57</span></a>
+                <a class="nook" href="#">吐槽<span class="num">57</span></a>
+            </div>
+        </div>
+        <!-- 只看有内容的评价 -->
+        <div class="only">
+            <label class="label">
+                <span class="check-icon iconfont icon-ziyuan"></span>
+                <input class="check" type="checkbox" name="" id="">
+            </label>
+            <span>只看有内容的评价</span>
+        </div>
+        <!-- 评论 -->
+        <ul class="rate-list">
+            <li>
+                <p class="clearfix">
+                    <span class="time fl">2016-18-54</span>
+                    <img class="fr" src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png" alt="">
+                    <span class="name fr">猪猪猪猪猪猪</span>
+                </p>
+                <p>
+                    <span class="icon iconfont icon-dianzan_ good like"></span>
+                    <span class="icon iconfont icon-ai46 good nolike"></span>
+                    <span class="page">太够了</span>
+                </p>
+            </li>
+            <li>
+                <p class="clearfix">
+                    <span class="time fl">2016-18-54</span>
+                    <img class="fr" src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png" alt="">
+                    <span class="name fr">猪猪猪猪猪猪</span>
+                </p>
+                <p>
+                    <span class="icon iconfont icon-dianzan_ good like"></span>
+                    <span class="icon iconfont icon-ai46 good nolike"></span>
+                    <span class="page">太够了</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

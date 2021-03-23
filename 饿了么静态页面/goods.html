@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- 图标字体 -->
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <!-- 移动端匹配 -->
+    <script>
+        (function () {
+            // 获取HTML根对象
+            var html = document.documentElement;
+            var whtml = html.getBoundingClientRect().width;
+            html.style.fontSize = whtml / 7.5 + "px";
+        })();
+    </script>
+
+    <style type="text/css">
+        /* 本页样式写在这里 */
+        .goods {
+            display: flex;
+        }
+
+        .goods>.content {
+            flex: 1;
+        }
+
+        .menu-list {
+            width: 1.6rem;
+        }
+
+        .menu-list li {
+            width: 100%;
+            background-color: #f3f5f7;
+            padding: 0 0.24rem;
+            height: 1.08rem;
+        }
+
+        .menu-list li a {
+            width: 1.12rem;
+            height: 100%;
+            display: inline-block;
+            line-height: 1.08rem;
+            font-size: 0.24rem;
+            color: rgb(7, 17, 27);
+        }
+
+        .menu-list li:not(:last-child) a {
+            border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+        }
+
+        .menu-list li.on {
+            background-color: #fff;
+            height: 1.1rem;
+            position: relative;
+            top: -0.01rem;
+        }
+
+        .menu-list li.on a {
+            border-bottom: 1px solid transparent;
+        }
+
+        .menu-list li .icon {
+            display: inline-block;
+            width: 0.32rem;
+            height: 0.32rem;
+            background: url(img/guarantee_2@2x.png) no-repeat;
+            background-size: 0.32rem 0.32rem;
+            vertical-align: middle;
+        }
+
+        .content .item .title {
+            height: 0.52rem;
+            line-height: 0.52rem;
+            padding-left: 0.28rem;
+            background-color: #f3f5f7;
+            width: 100%;
+            border-left: 0.04px solid #d9dde1;
+        }
+
+        .con-list {
+            background-color: #fff;
+        }
+
+        .con-list li {
+            margin: 0.36rem;
+            padding-bottom: 0.36rem;
+        }
+
+        .con-list li:not(:last-child) {
+            border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+        }
+
+        .con-list .img {
+            width: 1.14rem;
+            height: 1.14rem;
+            margin-right: 0.2rem;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .con-list .text .tit {
+            font-size: 0.28rem;
+            color: rgb(7, 17, 27);
+        }
+
+        .text .name,
+        .text .total {
+            font-size: 0.2rem;
+            color: rgb(147, 153, 159);
+            margin-top: 0.16rem;
+        }
+
+        .choice {
+            font-size: 0.48rem;
+            color: #00a0dc;
+            font-weight: 400;
+            vertical-align: middle;
+        }
+
+        .num {
+            display: inline-block;
+            width: 0.48rem;
+            color: #c3c6c9;
+        }
+        .num-wrap{
+            position: absolute;
+            right: 0;
+            bottom: 0.36rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部-->
+    <div class="goods clearfix">
+        <!-- 类别 -->
+        <div class="menu fl">
+            <ul class="menu-list">
+                <li>
+                    <a href="#">
+                        热销榜
+                    </a>
+                </li>
+                <li class="on">
+                    <a href="#">
+                        <span class="icon"></span>
+                        热销榜
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        热销榜
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        热销榜
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 菜品 -->
+        <div class="content fl">
+            <div class="item">
+                <div class="title">单人特色套餐</div>
+                <ul class="con-list">
+                    <li class="clearfix pore">
+                        <div class="img fl">
+                            <img src="http://fuss10.elemecdn.com/d/2d/b1eb45b305635d9dd04ddf157165fjpeg.jpeg?imageView2/1/w/114/h/114"
+                                alt="">
+                        </div>
+                        <div class="text fl">
+                            <p class="title-wrap">皮蛋瘦肉粥配包子套餐</p>
+                            <p class="name">咸粥</p>
+                            <p class="total">月很瘦</p>
+                        </div>
+                        <!-- 加减 -->
+                <div class="num-wrap">
+                    <span class="iconfont icon-jian choice"></span>
+                    <span class="num tc">1</span>
+                    <span class="iconfont icon-jia1 choice"></span>
+                </div>
+                    </li>
+                    <li class="clearfix pore">
+                        <div class="img fl">
+                            <img src="http://fuss10.elemecdn.com/d/2d/b1eb45b305635d9dd04ddf157165fjpeg.jpeg?imageView2/1/w/114/h/114"
+                                alt="">
+                        </div>
+                        <div class="text fl">
+                            <p class="title-wrap">皮蛋瘦肉粥配包子套餐</p>
+                            <p class="name">咸粥</p>
+                            <p class="total">月很瘦</p>
+                        </div>
+                        <!-- 加减 -->
+                <div class="num-wrap">
+                    <span class="iconfont icon-jian choice"></span>
+                    <span class="num tc">1</span>
+                    <span class="iconfont icon-jia1 choice"></span>
+                </div>
+                    </li>
+                    <li class="clearfix pore">
+                        <div class="img fl">
+                            <img src="http://fuss10.elemecdn.com/d/2d/b1eb45b305635d9dd04ddf157165fjpeg.jpeg?imageView2/1/w/114/h/114"
+                                alt="">
+                        </div>
+                        <div class="text fl">
+                            <p class="title-wrap">皮蛋瘦肉粥配包子套餐</p>
+                            <p class="name">咸粥</p>
+                            <p class="total">月很瘦</p>
+                        </div>
+                        <!-- 加减 -->
+                <div class="num-wrap">
+                    <span class="iconfont icon-jian choice"></span>
+                    <span class="num tc">1</span>
+                    <span class="iconfont icon-jia1 choice"></span>
+                </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

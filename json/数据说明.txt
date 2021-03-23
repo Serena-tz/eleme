@@ -1,0 +1,6 @@
+1.seller.json表示商家信息
+在线模拟数据地址：
+https://easy-mock.com/mock/5f587187d5906660c22dadf9/seller
+
+2.goods.json表示商品信息
+3.ratings.json表示评价信息

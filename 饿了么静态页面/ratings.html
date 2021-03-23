@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- 图标字体 -->
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <!-- 移动端匹配 -->
+    <script>
+        (function () {
+            // 获取HTML根对象
+            var html = document.documentElement;
+            var whtml = html.getBoundingClientRect().width;
+            html.style.fontSize = whtml / 7.5 + "px";
+        })();
+    </script>
+
+    <style type="text/css">
+        /* 本页样式写在这里 */
+        .ratings {
+            background-color: #f3f5f7;
+        }
+
+        .rate {
+            padding: 0.36rem 0;
+            margin-bottom: 0.3rem;
+            background-color: #fff;
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .rate .left {
+            width: 2.75rem;
+            border-right: rgb(7, 17, 27, 0.2) solid 0.01rem;
+        }
+
+        .rate .rig {
+            width: 4.74rem;
+        }
+
+        .scroe {
+            font-size: 0.48rem;
+            color: rgb(255, 153, 0);
+            line-height: 0.56rem;
+        }
+
+        .left .all {
+            font-size: 0.24rem;
+            color: rgb(7, 17, 27);
+            line-height: 0.24rem;
+            margin: 0.12rem 0 0.1rem;
+        }
+
+        .left .tall {
+            padding-top: 0.1rem;
+            margin: 0 0 0.12rem;
+            font-size: 0.2rem;
+            color: rgb(7, 17, 27, 0.5);
+            line-height: 0.2rem;
+        }
+
+        .stars {
+            margin: 0 0.24rem;
+        }
+
+        /* 星星 */
+        .stars {
+            font-size: 0.28rem;
+        }
+
+        .stars .or {
+            color: #ff9900;
+        }
+
+        .stars .gray {
+            color: #d4d6d9;
+        }
+
+        /* 星星 */
+        .rig .num {
+            color: #ff9900;
+        }
+
+        .rig .item {
+            margin-left: 0.48rem;
+        }
+
+        .rig .item:not(:last-child) {
+            margin-bottom: 0.16rem;
+        }
+
+        .rig .item .title {
+            font-size: 0.24rem;
+            color: rgb(7, 17, 27);
+            line-height: 0.36rem;
+        }
+
+        .item .time {
+            margin-left: 0.24rem;
+            font-size: 0.24rem;
+            color: rgb(147, 153, 159);
+            line-height: 0.36rem;
+        }
+
+        .content {
+            background-color: #fff;
+            border-top: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .content .title {
+            margin: 0.36rem 0.36rem 0;
+            padding-bottom: 0.36rem;
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .content .title a {
+            display: inline-block;
+            height: 0.6rem;
+            line-height: 0.6rem;
+            padding: 0 0.20rem;
+            margin-right: 0.15rem;
+        }
+
+        .title .all {
+            background-color: #00a0dc;
+        }
+
+        .title .ok {
+            background-color: #ccecf8;
+            color: rgb(7, 17, 27);
+        }
+
+        .title .nook {
+            background-color: #e9ebec;
+            color: rgb(7, 17, 27);
+        }
+
+        .title .num {
+            font-size: 0.2rem;
+            margin-left: 0.1rem;
+        }
+
+        .only {
+            height: 0.95rem;
+            line-height: 0.95rem;
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+
+        .check-icon {
+            color: #b7bbbf;
+        }
+
+        .check {
+            width: 0;
+            margin-right: -0.1rem;
+        }
+
+        .label {
+            margin-left: 0.36rem;
+        }
+        .rem .pic{
+            width: 0.56rem;
+            height: 0.56rem;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 0.24rem;
+        }
+        .rem .pic img{
+            width: 100%;
+            height: 100%;
+        }
+        .rem-list{
+            margin-bottom: 0.95rem;
+        }
+        .rem-list li{
+            margin:0.36rem 0.36rem 0;
+            padding-bottom: 0.36rem;
+        }
+        .rem-list li:not(:last-child){
+            border-bottom: 0.01rem solid rgb(7, 17, 27, 0.2);
+        }
+        .rem-list .text{
+            font-size: 0.2rem;
+            color: rgb(7, 17, 27);
+            line-height: 0.24rem;
+            width: 88%;
+        }
+        .rem-list .stars{
+            display: inline-block;
+            margin: 0.08rem 0 0.12rem 0;
+        }
+        .rem-list .time{
+            font-size: 0.2rem;
+            color: rgb(147, 153, 159);
+            margin-left: 0.12rem;
+        }
+        .rig-time{
+            font-size: 0.2rem;
+            color: rgb(147, 153, 159);
+            font-weight: 200;
+            line-height: 0.24rem;
+        }
+        .rem-list .con{
+            font-size: 0.24rem;
+            color: rgb(7, 17, 27);
+            line-height: 0.36rem;
+        }
+        .detail{
+            margin-top: 0.16rem;
+        }
+        .detail .icon{
+            margin-right: 0.12rem;
+            font-size: 0.24rem;
+        }
+        .detail .con{
+            width: 1.25rem;
+            display: inline-block;
+            border: rgba(7, 17, 27,0.1) solid 0.02rem;
+            font-size: 0.18rem;
+            color: rgb(147, 153, 159);
+            line-height: 0.32rem;
+            height: 0.32rem;
+            vertical-align: baseline;
+        }
+        .detail .like{
+            color: #00a0dc;
+        }
+        .detail .nolike{
+            color: #b7bbbf;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部-->
+    <div class="ratings">
+        <!-- 综合评分 -->
+        <div class="rate clearfix">
+            <div class="left tc fl">
+                <p class="scroe">3.9</p>
+                <p class="all">综合评分</p>
+                <p class="tall">高于周边商家69%</p>
+            </div>
+            <div class="rig fl">
+                <div class="item">
+                    <span class="title">服务态度</span>
+                    <span class="stars">
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 gray"></span>
+                    </span>
+                    <span class="num">3.9</span>
+                </div>
+                <div class="item">
+                    <span class="title">服务态度</span>
+                    <span class="stars">
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 or"></span>
+                        <span class="iconfont icon-xingxing1 gray"></span>
+                    </span>
+                    <span class="num">3.9</span>
+                </div>
+                <div class="item">
+                    <span class="title">服务态度</span>
+                    <span class="time">44分钟</span>
+                </div>
+            </div>
+        </div>
+        <!-- 评价分类 -->
+        <div class="content">
+            <div class="title">
+                <a class="tc white all" href="#">全部<span class="num">57</span></a>
+                <a class="tc ok" href="#">满意<span class="num">57</span></a>
+                <a class="tc nook" href="#">不满意<span class="num">57</span></a>
+            </div>
+            <!-- 只看有内容的评价 -->
+            <div class="only">
+                <label class="label">
+                    <span class="check-icon iconfont icon-ziyuan"></span>
+                    <input class="check" type="checkbox" name="" id="">
+                </label>
+                <span>只看有内容的评价</span>
+            </div>
+            <!-- 评论 -->
+            <div class="rem clearfix">
+                <ul class="rem-list">
+                    <li>
+                        <div class="clearfix">
+                            <div class="pic fl">
+                                <img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png" alt="">
+                            </div>
+                            <div class="text fl">
+                                <p class="clearfix">
+                                    <span class="fl">即啦啦啦</span>
+                                    <span class="fr rig-time">2016-11-12 18:36</span>
+                                </p>
+                                <p>
+                                    <span class="stars">
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 gray"></span>
+                                    </span>
+                                    <span class="time">60分钟送达</span>
+                                </p>
+                                <p class="con">嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦</p>
+                                <!-- 详情 -->
+                                <div class="detail">
+                                    <span class="icon iconfont icon-dianzan_ good like"></span>
+                                    <span class="con cutFont">大王香菇卤菜嘻嘻</span>
+                                    <span class="con cutFont">大王香菇卤菜嘻嘻</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="clearfix">
+                            <div class="pic fl">
+                                <img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png" alt="">
+                            </div>
+                            <div class="text fl">
+                                <p class="clearfix">
+                                    <span class="fl">即啦啦啦</span>
+                                    <span class="fr rig-time">2016-11-12 18:36</span>
+                                </p>
+                                <p>
+                                    <span class="stars">
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 or"></span>
+                                        <span class="iconfont icon-xingxing1 gray"></span>
+                                    </span>
+                                    <span class="time">60分钟送达</span>
+                                </p>
+                                <p class="con">嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦嘻嘻嘻嘻嘻嘻嘻啦啦啦啦</p>
+                                <!-- 详情 -->
+                                <div class="detail">
+                                    <span class="icon iconfont icon-dianzan_ good like"></span>
+                                    <span class="icon iconfont icon-ai46 good nolike"></span>
+                                    <span class="con cutFont">大王香菇卤菜嘻嘻</span>
+                                    <span class="con cutFont">大王香菇卤菜嘻嘻</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
